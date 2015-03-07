@@ -1,0 +1,2 @@
+serviceClass: com.lemmanet.client.GreetingService
+path: 71F4035576863154353B98E696D6C82A.gwt.rpc
