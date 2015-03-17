@@ -15,6 +15,15 @@ public class MailHandler {
 		Properties props = new Properties();
         Session session = Session.getDefaultInstance(props, null);
 
+        if(name==null||name.trim().length()==0 || name.equals("null")){
+        	return "Please enter name";
+        }
+        if(phone==null||phone.trim().length()==0|| phone.equals("null")){
+        	return "Please enter phone";
+        }
+        if(notes==null||notes.trim().length()==0|| notes.equals("null")){
+        	return "Please enter notes";
+        }
         String msgBody = "This is an enquiry regarding the parish hall from " + name + " phone: " + phone + " Notes: " + notes;
         try {
             Message msg = new MimeMessage(session);
