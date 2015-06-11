@@ -29,13 +29,9 @@ public class MailHandler {
             Message msg = new MimeMessage(session);
             msg.setFrom(new InternetAddress("alanthekkekuttu@gmail.com", "St Stephens Parish Hall"));
             msg.addRecipient(Message.RecipientType.TO,
-                    new InternetAddress("jobyvjohn@hotmail.com", "Mr. Joby John"));
-            msg.addRecipient(Message.RecipientType.TO,
-                    new InternetAddress("vtkurian@yahoo.com", "Mr. Benison George"));
-            msg.addRecipient(Message.RecipientType.TO,
+                    new InternetAddress("parishhallinquiry@gmail.com", "Church Parish Hall Group"));
+            msg.addRecipient(Message.RecipientType.BCC,
                     new InternetAddress("alanthekkekuttu@gmail.com", "Mr. Alan Varghese"));
-            msg.addRecipient(Message.RecipientType.TO,
-                    new InternetAddress("swvarghese@msn.com", "Mr. Sunny Varghese"));
             msg.setSubject("Parish Hall Request");
             msg.setText(msgBody);
             Transport.send(msg);
